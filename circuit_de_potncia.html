@@ -1,0 +1,104 @@
+<!doctype html>
+<html lang="es">
+<head>
+<link rel="stylesheet" type="text/css" href="base.css" />
+<link rel="stylesheet" type="text/css" href="content.css" />
+<link rel="stylesheet" type="text/css" href="nav.css" />
+<meta http-equiv="content-type" content="text/html;  charset=utf-8" />
+<title>Circuit de Potència </title>
+<link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+<link rel="license" type="text/html" href="http://creativecommons.org/licenses/by-sa/4.0/" />
+<meta name="generator" content="eXeLearning 2.9 - exelearning.net" />
+<!--[if lt IE 9]><script type="text/javascript" src="exe_html5.js"></script><![endif]-->
+<script type="text/javascript" src="exe_jquery.js"></script>
+<script type="text/javascript" src="common_i18n.js"></script>
+<script type="text/javascript" src="common.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+	</head>
+<body class="exe-web-site" id="exe-node-14"><script type="text/javascript">document.body.className+=" js"</script>
+<div id="content">
+<p id="skipNav"><a href="#main" class="sr-av">Saltar la navegación</a></p>
+<section id="emptyHeader"></section>
+<nav id="siteNav">
+<ul>
+   <li><a href="index.html" class="daddy main-node">Variació de la velocitat en motos asíncrons trifàsics</a></li>
+   <li class="current-page-parent"><a href="variaci_de_la_velocitat_per_canvi_en_el_nombre_de_parells_de_pols.html" class="current-page-parent daddy">Variació de la velocitat per canvi en el nombre de parells de pols</a>
+   <ul>
+      <li><a href="motor_de_dues_velocitats_amb_2_bobinats_independents.html" class="daddy">Motor de dues velocitats amb 2 bobinats independents</a>
+      <ul class="other-section">
+         <li><a href="circuit_potncia.html" class="no-ch">Circuit Potència</a></li>
+         <li><a href="automatisme_i.html" class="no-ch">Automatisme I</a></li>
+         <li><a href="automatisme_ii.html" class="no-ch">Automatisme II</a></li>
+      </ul>
+      </li>
+      <li class="current-page-parent"><a href="motor_de_dues_velocitats_amb_un_bobinat_motor_dahlander.html" class="current-page-parent daddy">Motor de dues velocitats amb un Bobinat "Motor Dahlander"</a>
+      <ul>
+         <li><a href="connexions_dels_terminals.html" class="no-ch">Connexions dels Terminals</a></li>
+         <li><a href="cadesimu_motor_dahlander.html" class="no-ch">CADeSIMU: Motor Dahlander</a></li>
+         <li id="active"><a href="circuit_de_potncia.html" class="active no-ch">Circuit de Potència</a></li>
+      </ul>
+      </li>
+   </ul>
+   </li>
+   <li><a href="tipus_de_crregues.html" class="daddy">Tipus de càrregues</a>
+   <ul class="other-section">
+      <li><a href="crregues_amb_parell_constant.html" class="no-ch">Càrregues amb Parell Constant</a></li>
+   </ul>
+   </li>
+   <li><a href="variaci_de_velocitat_per_canvis_en_la_freqncia.html" class="daddy">Variació de velocitat per canvis en la freqüència</a>
+   <ul class="other-section">
+      <li><a href="variador_de_freqncia.html" class="no-ch">Variador de Freqüència</a></li>
+   </ul>
+   </li>
+</ul>
+</nav>
+<div id='topPagination'>
+<nav class="pagination noprt">
+<a href="cadesimu_motor_dahlander.html" class="prev"><span><span>&laquo; </span>Anterior</span></a> <span class="sep">| </span><a href="tipus_de_crregues.html" class="next"><span>Siguiente<span> &raquo;</span></span></a>
+</nav>
+</div>
+<div id="main-wrapper">
+<section id="main">
+<header id="nodeDecoration"><h1 id="nodeTitle">Circuit de Potència</h1></header>
+<article class="iDevice_wrapper textIdevice" id="id35">
+<div class="iDevice emphasis0" >
+<div id="ta35_108_2" class="block iDevice_content">
+<div class="exe-text"><p>A continuació podem veure les característiques d'un motor Dahlander de parell quadràtic i nombre de pols:</p>
+<ul>
+<li>4 pols (2 imants) amb velocitat lenta:  n<sub>S</sub>=1500 r.p.m.</li>
+<li>2 pols (1 imant) amb velocitat ràpida: n<sub>S</sub>=3000 r.p.m.</li>
+</ul>
+<p><img src="ARRANC3-176-1.png" width="680" height="300" /></p>
+<p>El primer que s'ha de destacar és que aquests motors tenen una única tensió de funcionament. En el nostre cas 400V, pent tant, s'han de connectar a un sistema trifàsic de 400V.</p>
+<p>En segon lloc, podem veure que per cada velocitat nominal, el motor té assignada una potència mecànica i un consum de corrent. Segons el motor seleccionat:</p>
+<ul>
+<li>Velocitat lenta:       n=1420 r.p.m.    P=0'37KW     In=1A   η=66%    FP=0'82</li>
+<li>Velocitat ràpida:    n=2820r.p.m.     P=1'5KW       In=4A   η=64%   FP=0'81</li>
+</ul>
+<p>Això implica que necessitem dos relés tèrmics o dos disjuntors amb diferent punt de protecció tèrmica:</p>
+<p><img src="ARRANC3-177-1.png" alt="" width="433" height="258" /></p>
+<p>A més necessitarem tres contactors amb les seguents funcions:</p>
+<ol>
+<li>ACTIVACIÓ KM1: Connexió a la xarxa dels terminals U1, V1 i W1 (VELOCITAT LENTA - connexió ESTRELA)</li>
+<li>ACTIVACIÓ KM2 i KM3:
+<ul>
+<li>KM2: curtcircuitar els terminals U1, V1 i W1 per fer la doble estrella</li>
+<li>KM3·: connexió a la xarxa dels terminals U2, V2 i W2 (VELOCITAT RÀPIDA - connexió DOBLE ESTRELA YY)</li>
+</ul>
+</li>
+</ol></div>
+</div>
+</div>
+</article>
+<div id="packageLicense" class="cc cc-by-sa">
+<p><span>Obra publicada con</span> <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">Licencia Creative Commons Reconocimiento Compartir igual 4.0</a></p>
+</div>
+</section>
+</div>
+<div id='bottomPagination'>
+<nav class="pagination noprt">
+<a href="cadesimu_motor_dahlander.html" class="prev"><span><span>&laquo; </span>Anterior</span></a> <span class="sep">| </span><a href="tipus_de_crregues.html" class="next"><span>Siguiente<span> &raquo;</span></span></a>
+</nav>
+</div>
+</div>
+<p id="made-with-eXe"><a href="https://exelearning.net/" target="_blank" rel="noopener"><span>Creado con eXeLearning<span> (Ventana nueva)</span></span></a></p><script type="text/javascript" src="_cedec_js.js"></script></body></html>
